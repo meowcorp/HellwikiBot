@@ -7,15 +7,17 @@ class Warn extends Command {
   constructor(props) {
     super(props);
     this.name = 'warn';
-    this.deleteAfterExec = true;
+    this.deleteAfterExec = false;
     this.accessByRole = true;
     this.permissions = ['BAN_MEMBERS', 'SEND_MESSAGES', 'ADD_REACTIONS'];
   }
 
   dropIncorrectUseWarning(message) {
+    const prefix = this.client.config.botPrefix;
+
     return message.dropWarning(
       'Некорректные аргументы',
-      `Использование команды: ${inlineCode('&warn <userId> <comment>')}`
+      `Использование команды: ${inlineCode(`${prefix}warn <userId> <comment>`)}`
     );
   }
 
