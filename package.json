@@ -1,0 +1,30 @@
+{
+  "name": "HellwikiBot",
+  "version": "0.0.1",
+  "description": "Bot for wiki discord server",
+  "main": "hellbot.js",
+  "repository": "https://github.com/meowcorp/HellwikiBot.git",
+  "author": "Denis K <45810834+meowcorp@users.noreply.github.com>",
+  "license": "NLPL",
+  "private": false,
+  "devDependencies": {
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^0.13.0",
+    "@sentry/node": "^6.19.7",
+    "@sentry/tracing": "^6.19.7",
+    "chalk": "4.1.0",
+    "dateformat": "^5.0.3",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
+    "enmap": "^5.9.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "moment": "^2.29.3",
+    "prettier": "^2.6.2",
+    "util": "^0.12.4"
+  }
+}
