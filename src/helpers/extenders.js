@@ -29,7 +29,7 @@ Message.prototype.dropBanMessage = function (channel, message) {
 
 Message.prototype.dropWarnMessage = function (channel, message) {
   const embed = new MessageEmbed();
-  embed.setColor(this.client.config.colors.error);
+  embed.setColor(this.client.config.colors.warning);
   embed.setTitle('Пользователь получил варн');
   embed.setDescription(message);
 

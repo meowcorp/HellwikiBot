@@ -22,10 +22,12 @@ class Warn extends Command {
   }
 
   async exec(message, args) {
-    const [member, comment] = args;
-    if (!member || !comment) {
+    const [member, ...commentArgs] = args;
+    if (!member || !commentArgs || commentArgs.length === 0) {
       return this.dropIncorrectUseWarning(message);
     }
+
+    const comment = commentArgs.join(' ').trim();
 
     const { guild } = message;
 
@@ -66,9 +68,10 @@ class Warn extends Command {
     });
 
     memberModel.warns.push({
-      comment: comment.trim(),
       modId: message.member.id,
+      modNickname: message.member.displayName,
       date: +new Date(),
+      comment,
     });
 
     const strikeSize = this.client.config.moderation.warnPerStrike;
